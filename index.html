@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping software</title>
+  <link rel="stylesheet" href="./css/Login_Signup.css">
+  <script src="renderer.js"></script>
+</head>
+
+<body>
+  <button id="loginOpen" class="loginButton">Login</button>
+
+  <div id="loginPage" class="modal">
+    <div class="form">
+      <div class="header"><span class="exitBtn">&times;</span></div>
+      <div class="head" class="signup">
+        <div onclick="swap(this)" data-tab="login" class="login-tab">
+          LOGIN
+        </div>
+        <div onclick="swap(this)" data-tab="signup" class="signup-tab">
+          SIGNUP
+        </div>
+      </div>
+
+      <div class="body" id="form-body">
+
+        <div class="login">
+          <form onsubmit="return checkInfoLogin(this)">
+            <input type="email" placeholder="Email:hello@gmail.com" name="loginEmail">
+            <input title="Password must be 6 characters and must contain one number, one lowercase and uppercase letter." type="password" placeholder="Password:Abc123" name="loginPass">
+            <input type="submit" value="Login">
+          </form>
+        </div>
+
+
+        <div class="signup">
+          <form onsubmit="newSub()" class="contCredit">
+            <input type="email" placeholder="Email:hello@gmail.com" name='signupEmail'>
+            <input title="Password must contain one number, one lowercase letter, and one uppercase letter. Minimum length 6 characters." type="Password" placeholder="Password:Abc123" name='signupPass'>
+            <input type="Password" placeholder="Re-Type Password" name='signupPass1'>
+            <input type="submit" value="Signup">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    require('./components/ModalLogin.js')
+  </script>
+</body>
+
+</html>
