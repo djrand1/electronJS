@@ -33,6 +33,10 @@ to start running the program and what we have so far. Electron js is pretty good
 
 To make the function works in this program, you have to first write the code for it in javascript and then put that code in the **renderer.js** file. That way the html, css and html will all be in different files.
 
+###Branching not master
+
+Make sure that you guys are branching out your own functionality and work, so that we are not deleting files or codes from the master branch. If you don't know how to create a branch, you can create a new repository in the **djrand1** main folder and add your files there. I can add your code to this repository once you are finish.
+
 ### End
 
-This is all I have for right now, please let me know what else I should add to this documentation. If you have any questions, please feel free to slack me, Dac. 
+This is all I have for right now, please let me know what else I should add to this documentation. If you have any questions, please feel free to slack me, Dac.
