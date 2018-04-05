@@ -1,3 +1,5 @@
+I'm learning pull/branch/etc.
+
 # Shopping Software, CSC 4350
 
 Hi Julio, Robert, Robertson, Naman and Alisha, welcome to our group github page and our project repository. I will give you a run down on how to use Electron.js and how to create functions, work on html and css and hopefully passing this class.
