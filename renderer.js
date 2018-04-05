@@ -34,9 +34,15 @@ function clickOutside(e){
 }
 
 function checkInfoLogin(form) {
+  var attemp=3;
   var errors1=[];
   var email1=form.loginEmail.value;
   var password1=form.loginPass.value;
+
+  if(attemp==0){
+
+    alert("Too many failed attempts. Please contact administrator.");
+  }
 
   if(email1==""){
     errors1.push('email1 field is empty.');
@@ -53,6 +59,7 @@ function checkInfoLogin(form) {
      for(var i = 0;i< errors1.length;i++){
        message1+=errors1[i] + "\n";
      }
+     attemp--;
      alert(message1);
      return false;
    }
