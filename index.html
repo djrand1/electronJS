@@ -5,48 +5,354 @@
   <meta charset="UTF-8">
   <title>Shopping software</title>
   <link rel="stylesheet" href="./css/Login_Signup.css">
+  <link rel="stylesheet" type="text/css" href="css/Style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
   <script src="renderer.js"></script>
 </head>
 
 <body>
-  <button id="loginOpen" class="loginButton">Login</button>
-
-  <div id="loginPage" class="modal">
-    <div class="form">
-      <div class="header"><span class="exitBtn">&times;</span></div>
-      <div class="head" class="signup">
-        <div onclick="swap(this)" data-tab="login" class="login-tab">
-          LOGIN
-        </div>
-        <div onclick="swap(this)" data-tab="signup" class="signup-tab">
-          SIGNUP
-        </div>
+  <section>
+    <!-- This is Section 1 of the page -->
+    <div class="section1">
+      <img src="Images/Website_Logo.png" class="logo" />
+      <div class="navigation">
+        <img src="Images/if_List_Text_Menu_Numbers_String_Burger_1329080.png" class="toggle" />
+        <a class="cgr">Categories</a>
       </div>
-
-      <div class="body" id="form-body">
-
-        <div class="login">
-          <form onsubmit="return checkInfoLogin(this)">
-            <input type="email" placeholder="Email:hello@gmail.com" name="loginEmail">
-            <input title="Password must be 6 characters and must contain one number, one lowercase and uppercase letter." type="password" placeholder="Password:Abc123" name="loginPass">
-            <input type="submit" value="Login">
-          </form>
-        </div>
-
-
-        <div class="signup">
-          <form onsubmit="newSub()" class="contCredit">
-            <input type="email" placeholder="Email:hello@gmail.com" name='signupEmail'>
-            <input title="Password must contain one number, one lowercase letter, and one uppercase letter. Minimum length 6 characters." type="Password" placeholder="Password:Abc123" name='signupPass'>
-            <input type="Password" placeholder="Re-Type Password" name='signupPass1'>
-            <input type="submit" value="Signup">
-          </form>
-        </div>
-
+      <div>
+        <a href="#technology" class="submenu">Technology</a>
+        <a href="#women" class="submenu">Women</a>
+        <a href="#men" class="submenu">Men</a>
+        <a href="#kids" class="submenu">Kids</a>
+        <a href="#homegood" class="submenu">Home Goods</a>
+        <a href="#other" class="submenu">Other</a>
       </div>
     </div>
-  </div>
 
+
+
+    <!-- This is section 2 of the page -->
+
+    <div class="section2">
+      <input type="text" placeholder="search" class="txtsrch" /><button type="button" class="btnsrch">Search</button>
+
+
+      <button id="loginOpen"><img src="Images/loginicon.png" class="call-icon" />
+      <span class="tel-no">Login</span></button>
+
+      <div id="loginPage" class="modal">
+        <div class="form">
+          <div class="header"><span class="exitBtn">&times;</span></div>
+          <div class="head" class="signup">
+            <div onclick="swap(this)" data-tab="login" class="login-tab">
+              LOGIN
+            </div>
+            <div onclick="swap(this)" data-tab="signup" class="signup-tab">
+              SIGNUP
+            </div>
+          </div>
+
+          <div class="body" id="form-body">
+
+            <div class="login">
+              <form onsubmit="return checkInfoLogin(this);">
+                <input type="text" placeholder="Email:hello@gmail.com" name="loginEmail">
+                <input title="Password must be 6 characters and must contain one number, one lowercase and uppercase letter." type="password" placeholder="Password:Abc123" name="loginPass">
+                <input type="submit" value="Login">
+              </form>
+            </div>
+
+
+            <div class="signup">
+              <form onsubmit="return checkinfo(this);">
+                <input type="text" placeholder="Email:hello@gmail.com" name='signupEmail' title="Example email:Hello@gmail.com">
+                <input title="Password must contain one number, one lowercase letter, and one uppercase letter. Minimum length 6 characters." type="Password" placeholder="Password:Abc123" name='signupPass'>
+                <input type="Password" placeholder="Re-Type Password" name='signupPass1'>
+                <input type="submit" value="Signup">
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <a href="#" onclick="myLocation()" class="btn btn-info btn-lg">
+              <span class="glyphicon glyphicon-record"></span> Location
+            </a>
+      <p id="myLoc"></p>
+      <nav>
+        <a class="menuitem">Home</a>
+        <a class="menuitem">My Account</a>
+        <a class="menuitem">Shopping Cart</a>
+        <a class="menuitem">Checkout</a>
+        <a href="#calendar" class="menuitem">Calender</a>
+
+
+      </nav>
+
+      <div class="slider">
+        <div class="slides">
+          <div class="slide1">
+            <img src="Images/4-2-iphone-png-picture-png-image.png" class="img1" />
+          </div>
+          <div class="slide1">
+            <img src="Images/2-2-iphone-png-picture.png" class="img2" />
+          </div>
+          <div class="slide1">
+            <img src="Images/1-2-iphone-png-picture-png-clipart.png" class="img3" />
+          </div>
+          <div class="constant">
+            <h1>iPhone 7</h1>
+            <p>Comfort is a very important things nowadays because it is a condition of satifaction.</p>
+
+            <a class="btnshopnow">Shop Now!</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="content1">
+        <!-- <div class="innertitle1">
+                      <h3>Home Theater & TV</h3>
+                      <p class="para1">Comfort is a very important things nowadays because it is a condition of satifaction.</p>
+                      <br />
+                      <p class="para1">Shop Now!</p>
+                  </div>
+
+                  <div class="innertitle2">
+                      <h3>Home Appliances</h3>
+                      <p class="para1">Comfort is a very important things nowadays because it is a condition of satifaction.</p>
+                      <br />
+                      <p class="para1">Shop Now!</p>
+                  </div>
+
+                  <div class="inner1">
+                      <img src="Images/Home_Theaters.png" class="img1" />
+                  </div>
+                  <div class="inner2">
+                      <img src="Images/Black_Vacuum_Cleaner_PNG_Clipart-629.png" class="img2" />
+                  </div>-->
+      </div>
+
+      <p class="featuredpara" id="technology">Technology</p>
+
+      <div class="products">
+        <fieldset class="col1">
+          <legend>SALE</legend>
+          <img src="Images/Laptop.png" class="img1" />
+          <h3>$184.78<strike>$192.45</strike></h3>
+          <h4>Apple MacBook Pro 13-inch Laptop (Intel Dual-Core i5 2.4 GHz, 4 GB RAM, 500 GB HDD, Intel HD, OS X) - Silver - 2011</h4>
+        </fieldset>
+
+        <fieldset class="col2">
+          <legend>SALE</legend>
+          <img src="Images/Canon_Camera.png" class="img1" />
+          <h3>$636.21<strike>$642.45</strike></h3>
+          <h4>Canon EOS 200D Digital SLR Camera with EF-S 18 - 55 mm f/4-5.6 IS</h4>
+        </fieldset>
+
+        <fieldset class="col3">
+          <legend>SALE</legend>
+          <img src="Images/38_Printers.png" class="img1" />
+          <h3>$49.41<strike>$50.31</strike></h3>
+          <h4>HP Envy 4527 All-in-One Printer, Instant Ink Compatible with 4 Months Trial</h4>
+        </fieldset>
+      </div>
+
+
+      <p class="featuredpara" id="men">Men</p>
+
+      <div class="products">
+        <fieldset class="col1">
+          <legend>SALE</legend>
+          <img src="Images/socks.png" class="img1" />
+          <h3>$22.49<strike>$27.34</strike></h3>
+          <h4>Puma Mens No show Sport Socks, Moisture Control, Arch Support (8 Pair) (Regular Shoe Size: 6-12, Black)</h4>
+        </fieldset>
+
+        <fieldset class="col2">
+          <legend>SALE</legend>
+          <img src="Images/watch.png" class="img1" />
+          <h3>$58.59<strike>$78.31</strike></h3>
+          <h4>Tommy Hilfiger Men's 1710330 Stainless Steel Watch with Black Genuine Leather Band
+                      </h4>
+        </fieldset>
+
+        <fieldset class="col3">
+          <legend>SALE</legend>
+          <img src="Images/leatherjacket.png" class="img1" />
+          <h3>$80.71<strike>$119.31</strike></h3>
+          <h4>MILWAUKEE LEATHER Men’s Classic Side Lace Police Style Motorcycle Jacket (SH1011-XL-BLACK)</h4>
+        </fieldset>
+      </div>
+      <p class="featuredpara" id="women">Women</p>
+      <div class="products" style="margin-top:3vh;">
+        <fieldset class="col1">
+          <legend>SALE</legend>
+          <img src="Images/pumps.jpg" class="img1" />
+          <h3>$29.99<strike>35.47</strike></h3>
+          <h4>DREAM PAIRS Women's Swan-10 High Heel Plaform Dress Pump Shoes</h4>
+        </fieldset>
+
+        <fieldset class="col2">
+          <legend>SALE</legend>
+          <img src="Images/jeans.png" class="img1" />
+          <h3>$99.51<strike>$117.23</strike></h3>
+          <h4>J Brand Jeans Women's 811 Mid Rise Skinny In Refresh Destruct</h4>
+        </fieldset>
+
+        <fieldset class="col3">
+          <legend>SALE</legend>
+          <img src="Images/handbag.png" class="img1" />
+          <h3>$105.59<strike>$118.00</strike></h3>
+          <h4>GUESS Fruit Punch Pineapple Society Satchel</h4>
+        </fieldset>
+      </div>
+
+      <p class="featuredpara">Calendar</p>
+      <div class="calendar-container" id='calendar'>
+
+
+        <header>
+
+          <div class="day">18</div>
+          <div class="month">August</div>
+
+        </header>
+
+        <table class="calendar">
+
+          <thead>
+
+            <tr>
+
+              <td>Mon</td>
+              <td>Tue</td>
+              <td>Wed</td>
+              <td>Thu</td>
+              <td>Fri</td>
+              <td>Sat</td>
+              <td>Sun</td>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="prev-month">29</td>
+              <td class="prev-month">30</td>
+              <td class="prev-month">31</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+            </tr>
+
+            <tr>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+            </tr>
+
+            <tr>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td class="current-day">18</td>
+            </tr>
+
+            <tr>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+            </tr>
+
+            <tr>
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+              <td>30</td>
+              <td>31</td>
+              <td class="next-month">1</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+        <div class="ring-left"></div>
+        <div class="ring-right"></div>
+
+      </div>
+      <!-- end calendar-container -->
+
+
+      <br />
+      <!-- Control buttons -->
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('clothes')"> Clothes</button>
+        <button class="btn" onclick="filterSelection('electronic')"> Electronic</button>
+        <button class="btn" onclick="filterSelection('books')"> Books</button>
+        <button class="btn" onclick="filterSelection('food')"> Food</button>
+      </div>
+
+      <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+      <div class="container">
+        <div class="filterDiv clothes">Tommy Hilfiger</div>
+        <div class="filterDiv food books">Gordan Ramsey Cooking</div>
+        <div class="filterDiv clothes">Ralph Lauren</div>
+        <div class="filterDiv food">Banana </div>
+      </div>
+      <div class="filterDiv clothes electronic">Phone Cases</div>
+      <div class="filterDiv food">Beef</div>
+      <div class="filterDiv electronic">Laptop</div>
+      <div class="filterDiv electronic">Desktop</div>
+      <div class="filterDiv books">Hamlet</div>
+      <div class="filterDiv books electronic">Javascript for Dummy</div>
+      <div class="filterDiv books">ABC: Learn the Alphabet</div>
+      <div class="filterDiv books">Java for Life</div>
+      <div class="filterDiv electronic">Iphone</div>
+    </div>
+
+    </div>
+
+  </section>
+
+
+  </div>
+  <!-- Our footer is not working currently, but we will update it before the presentation
+
+  <footer>
+    <div class="h4footer">
+      <h4>Help Center</h4>
+      <h4>About Us</h4>
+      <h4>Contact Us</h4>
+      <h4>Calender </h4>
+    </div>
+    <hr />
+    <div class="copyright">
+      <span>DJRAN.Inc, Copyright &copy; 2018</span>
+    </div>
+
+  </footer>
+
+-->
   <script>
     require('./components/ModalLogin.js')
   </script>

@@ -1,0 +1,582 @@
+
+body {
+	
+	font: 87.5%/1.5em 'Lato', sans-serif;
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td {
+	padding: 0;
+}
+
+.container {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calendar-container {
+	position: relative;
+	width: 450px;
+}
+
+.calendar-container header {
+	border-radius: 1em 1em 0 0;
+	background: #e66b6b;
+	color: #fff;
+	padding: 3em 2em;
+}
+
+.day {
+	font-size: 8em;
+	font-weight: 900;
+	line-height: 1em;
+}
+
+.month {
+	font-size: 4em;
+	line-height: 1em;
+	text-transform: lowercase;
+}
+
+.calendar {
+	background: #fff;
+	border-radius: 0 0 1em 1em;
+	-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+	color: #555;
+	display: inline-block;
+	padding: 2em;
+}
+
+.calendar thead {
+	color: #e66b6b;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.calendar td {
+	padding: .5em 1em;
+	text-align: center;
+}
+
+.calendar tbody td:hover {
+	background: #cacaca;
+	color: #fff;
+}
+
+.current-day {
+	color: #e66b6b;
+}
+
+.prev-month,
+.next-month {
+	color: #cacaca;
+}
+
+.ring-left,
+.ring-right {
+	position: absolute;
+	top: 230px;
+}
+
+.ring-left { left: 2em; }
+.ring-right { right: 2em; }
+
+.ring-left:before,
+.ring-left:after,
+.ring-right:before,
+.ring-right:after {
+	background: #fff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+	box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+	content: "";
+	display: inline-block;
+	margin: 8px;
+	height: 32px;
+	width: 8px;
+}
+
+.cld-main{
+  width: 660px;
+}
+.cld-main a{
+  color: #7B00FF;
+}
+body{
+  font-family: Calibri, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #333;
+}
+
+#calendar-buttonicon {
+position: relative;
+
+}
+
+#popo {
+  position: absolute;
+  bottom:32;
+  left:337px;
+font-weight:900;
+  background-color:grey  ;
+
+}
+
+
+#buttPOS{
+  position: relative;
+}
+#buttPOSCHILD{
+  position: relative;
+  right:0;
+ bottom:900;
+}
+/*
+This is for positioning the calendar invocation
+*/
+#buttPOSCHILD a {
+  display: inline-block;
+  position: fixed;
+  font-size:50px;
+  bottom:0;
+  right: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.unhide {
+  display: block;
+}
+
+  .cld-datetime{
+    position: relative;
+    width: 66%;
+    min-width: 100px;
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+  }
+  .cld-datetime .today{
+    position: relative;
+    float: left;
+    width: calc(100% - 40px);
+    margin: auto;
+    text-align: center;
+  }
+  .cld-nav{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+  .cld-nav:hover{
+    cursor: pointer;
+  }
+  .cld-nav:hover svg{
+      fill: #666;
+  }
+  .cld-rwd{
+    float: left;
+  }
+  .cld-fwd{
+    float: right;
+  }
+    .cld-nav svg:hover{
+
+    }
+.cld-labels, .cld-days{
+  padding-left: 0;
+}
+  .cld-label, .cld-day{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 14.28%;
+    text-align: center;
+  }
+  .cld-day{
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0;
+    padding: 5px;
+    height: 66px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+  }
+  .cld-day.clickable:hover{
+    cursor: pointer;
+  }
+  .cld-day.today{
+    border: 1px solid #7B00FF;
+  }
+  .cld-day.disableDay{
+    opacity: 0.5;
+  }
+  .cld-day.nextMonth, .cld-day.prevMonth{
+    opacity: 0.33;
+  }
+    .cld-number{
+      margin: 0;
+      text-align: left;
+    }
+      .cld-title{
+        font-size: 10px;
+        display: block;
+        margin: 0;
+        font-weight: normal;
+      }
+      .cld-day:hover{
+        background: #eee;
+      }
+      .cld-number.eventday{
+        font-weight: bold;
+      }
+      .cld-number.eventday:hover{
+        background: #eee;
+      }
+      .today .cld-number.eventday:hover{
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family:"Nunito Sans" , sans-serif;
+}
+
+section{
+    display:flex;
+    position:absolute;
+    z-index:4;
+}
+
+/* Section 1 */
+
+.section1{
+    width:27vw;
+    margin-right:2%;
+    margin-left:5%;
+}
+
+.logo{
+    width:23vw;
+    height:20vh;
+}
+
+.navigation{
+    margin-top:2vh;
+    width:100%;
+    height:7vh;
+    background-color:#94618E;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+}
+
+.toggle{
+    height:5vh;
+    width:2vw;
+    margin-left:3%;
+}
+.cgr{
+    margin-left:3%;
+}
+
+.submenu{
+    background-color:#F5F5F5;
+    display:block;
+    padding:4% 4%;
+    border-bottom:1px solid #a7a7ad;
+    padding-left:4%;
+}
+
+.submenu:hover{
+    cursor:pointer;
+    background-color:#94618E;
+}
+
+/*.section1 .para1{
+    padding:4% 4%;
+    background-color:#F5F5F5;
+    margin-top:10%;
+    margin-bottom:2%;*/
+}
+
+.background{
+    position:absolute;
+    right:0;left:0;bottom:0;top:0;
+    z-index:2;
+    width:100vw;
+    height:30vh;
+    background-color:#F5F5F5;
+}
+
+/* ********* */
+
+
+/* Section 2 */
+
+.section2{
+    width:68vw;
+    display:inline-block;
+}
+
+.txtsrch{
+    margin-left:18%;
+    margin-top:5%;
+    width:23vw;
+    height:5vh;
+    border:1px ridge #d5d5e6;
+}
+
+.txtsrch[placeholder]{
+    padding-left:1%;
+}
+
+.btnsrch{
+    width:5vw;
+    height:5vh;
+    background-color:#94618E;
+    border:0px;
+}
+
+.call-icon{
+    height:4.5vh;
+    margin-left:12%;
+
+}
+
+.tel-no{
+    font-size:1.5vw;
+    font-family:fantasy;
+}
+
+nav{
+    margin-top:10vh;
+    width:100%;
+    height:2%;
+    background-color:404040;
+    border-radius:6px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.menuitem{
+    margin-top:1vh;
+    padding:2% 2% 2% 2%;
+    text-decoration:none;
+    background-color:#404040;
+    color:white;
+    /*font-family:'Lobster Two';*/
+    font-size:1.5vw;
+    /*box-shadow:10px 15px 50px black;*/
+    box-shadow:black;
+}
+
+.menuitem:hover{
+    background-color:#94618E;
+    box-shadow:none;
+}
+
+.slider
+{
+    background-color:#F5F5F5;
+    width:68vw;
+    height:52vh;
+    overflow:hidden;
+    margin-top:7vh;
+}
+
+.slider .slides{
+    width:200vw;
+    height:52vh;
+    display:flex;
+}
+
+.slide1{
+    width:68vw;
+    height:52vh;
+}
+
+.slide1 .img1{
+    width:33vw;
+    height:38vh;
+    display:inline-block;
+    margin-top:4%;
+}
+.slide1 .img2{
+    width:38vw;
+    height:50vh;
+}
+.slide1 .img3{
+    width:38vw;
+    height:52vh;
+}
+
+.constant{
+    position:absolute;
+    width:26vw;
+    height:52vh;
+    margin-left:36vw;
+}
+.constant h1{
+    margin-top:10vh;
+    color:#94618E;
+}
+.constant p{
+    font-family:'Pacifico';
+    margin-top:3vh;
+    margin-bottom:3vh;
+}
+
+.constant .btnshopnow{
+    padding:4%;
+    color:white;
+    background-color:#313030;
+    border-radius:10px;
+}
+
+/*.content1{
+    width:100%;
+    height:0vh;
+    margin-top:5vh;
+    display:flex;
+}*/
+
+/*.content1 .inner1{
+    width:50%;
+    height:100%;
+    text-align:right;
+    border:1px solid #afafaf;
+}
+.content1 .inner1 .img1{
+    width:20vw;
+    height:35vh;
+}
+.content1 .inner2{
+    width:50%;
+    height:100%;
+    text-align:right;
+    border:1px solid #afafaf;
+    border-left:none;/*
+}
+
+.content1 .inner2 .img2{
+    width:15vw;
+    height:35vh;
+}
+
+/*.innertitle1{
+    position:absolute;
+    width:16vw;
+    height:30%;
+    text-align:center;
+    margin-left:1%;
+}
+.innertitle2{
+    position:absolute;
+    width:20vw;
+    height:30%;
+    margin-left:38%;
+    text-align:center;
+}
+
+.innertitle1 , .innertitle2{
+    margin-top:2%;*/
+}
+
+.content1 h3{
+    color:#94618E;
+}
+/*.content1 .para1{
+    font-family:'Pacifico';
+}*/
+
+.featuredpara{
+    margin-top:7vh;
+    margin-bottom:3vh;
+    padding:2vh 66vw 1vw 4vh;
+    background-color:#94618E;
+    /*F5F5F5*/
+}
+
+.products{
+    width:68vw;
+    height:58vh;
+    display:flex;
+}
+
+.products fieldset{
+    width:20vw;
+    padding-left:2vw;
+    padding-right:2vw;
+    padding-top:4vh;
+    border:1px solid #afafaf;
+}
+
+legend{
+    padding:2% 2% 1% 2%;
+    background-color:black;
+    color:white;
+}
+
+.products .col1 , .col2 {
+    margin-right:1vw;
+}
+
+.products .col1 .img1{
+    width:17vw;
+    height:20vh;
+}
+.products .col2 .img1{
+    width:11vw;
+    height:20vh;
+    padding-left:14%;
+}
+
+.products .col3 .img1{
+    width:13vw;
+    height:20vh;
+    padding-left:5%;
+}
+
+.products h3{
+    padding-top:5vh;
+    color:#94618E;
+}
+.products strike{
+    font-size:1vw;
+    padding-left:3%;
+}
+footer {
+  position: absolute;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ padding: 1rem;
+ background-color: #efefef;
+ text-align: center;
+
+}
+.h4footer h4{
+    display: inline-block;
+    padding: 30px;
+    color:#94618E;
+}
+
+@media(max-width: 768px){
+    .h4footer h4 {
+        display: block;
+        padding:0;
+    }
+/* ********* */

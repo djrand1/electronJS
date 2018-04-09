@@ -1,0 +1,9 @@
+version: 1.0.0
+files:
+  - url: electron-tutorial-app-setup-1.0.0.exe
+    sha512: oWEXhn/H6WC4GefQIF4aDRFBPITjGCs8TUiRc78yVQ/ojFzladtcJuURObNF5y2daIFqoBxtse3vWOfyO0eNFQ==
+    size: 40139914
+path: electron-tutorial-app-setup-1.0.0.exe
+sha512: oWEXhn/H6WC4GefQIF4aDRFBPITjGCs8TUiRc78yVQ/ojFzladtcJuURObNF5y2daIFqoBxtse3vWOfyO0eNFQ==
+sha2: 8d5fb2a7101260ebdf1c766369ae5e8df8c6827dbc9116541d4d696b2948072b
+releaseDate: '2018-04-09T12:39:38.030Z'
