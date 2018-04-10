@@ -15,6 +15,62 @@ exit.addEventListener('click',closeModal);
 //Listner for clicking outside of modal
 window.addEventListener('click', clickOutside)
 
+function insertUser(username,password,permissions) {
+    let userInsertSql = 'INSERT INTO user_info (username,password,permissions)\n'+
+                        ' VALUES\n'+
+                        '('+ '"'+username+'"' +','+ '"'+password+'"' +','+ permissions +');'
+	exectueSQLstmt(userInsertSql);
+}
+function exectueSQLstmt(stmt) {
+  const sqlite3 = require('sqlite3').verbose();
+
+  const path = require('path');
+
+  let db_path = '%CD%';
+
+
+  let db = new sqlite3.Database(db_path+'POD_dbfile.db', (err) => {
+      if (err) {
+          console.error(err.message);
+      }
+      console.log('SQLiteTestDB Connected');
+  });
+    db.run(stmt)
+
+}
+
+function searchUsername(username1){
+
+  const sqlite3 = require('sqlite3').verbose();
+
+  const path = require('path');
+
+  let db_path = '%CD%';
+
+  var test = 0;
+
+  let db = new sqlite3.Database(db_path+'POD_dbfile.db', (err) => {
+      if (err) {
+          console.error(err.message);
+      }
+      console.log('SQLiteTestDB Connected');
+  });
+
+  db.all("SELECT username FROM user_info", function(err,rows) {
+      rows.forEach(function (row){
+        if(row.username==username1){
+          test++;
+        }
+      })
+  });
+
+  db.close();
+//"SELECT * FROM user_info WHERE (username==username1)",function(err,rows)
+return test;
+
+
+
+}
 //function to open modal
 function openModal(){
   modal.style.display= 'block';
@@ -74,6 +130,14 @@ var check = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[
 //At least one Number, one uppercase and one lowercase letter
 //At minimum six characters
   var passValid = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+  var copy = 0;
+  copy = searchUsername(email);
+  console.log(copy);
+  if(copy>0){
+    alert("Username taken!");
+    return false;
+  }
   //Checks if email field is not left blank.
   if(email==""){
     errors.push('Email field is empty.');
@@ -96,7 +160,6 @@ var check = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[
     if(form.signupPass.value != form.signupPass1.value){
       errors.push("Passwords do not Match");
     }
-
     if(errors.length > 0){
       var message = "Errors:\n\n"
       for(var i = 0; i < errors.length; i++){
@@ -106,6 +169,8 @@ var check = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[
       return false;
     }
 
+
+	insertUser(email,password,1);
     //valid registration
     return true;
  }
