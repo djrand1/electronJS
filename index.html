@@ -11,7 +11,7 @@
 <body>
   <button id="loginOpen" class="loginButton">Login</button>
 
-  <div id="loginPage" class="modal">
+  <div id="loginPage" class="modalForLogin_Signup">
     <div class="form">
       <div class="header"><span class="exitBtn">&times;</span></div>
       <div class="head" class="signup">
@@ -26,7 +26,7 @@
       <div class="body" id="form-body">
 
         <div class="login">
-          <form onsubmit="return checkInfoLogin(this);">
+          <form onsubmit="return checkInfoLogin(this,false,0);">
             <input type="text" placeholder="Email:hello@gmail.com" name="loginEmail">
             <input title="Password must be 6 characters and must contain one number, one lowercase and uppercase letter." type="password" placeholder="Password:Abc123" name="loginPass">
             <input type="submit" value="Login">
@@ -35,7 +35,7 @@
 
 
         <div class="signup">
-          <form onsubmit="return checkinfo(this);">
+          <form onsubmit="return checkinfo(this,false,0);">
             <input type="text" placeholder="Email:hello@gmail.com" name='signupEmail' title="Example email:Hello@gmail.com">
             <input title="Password must contain one number, one lowercase letter, and one uppercase letter. Minimum length 6 characters." type="Password" placeholder="Password:Abc123" name='signupPass'>
             <input type="Password" placeholder="Re-Type Password" name='signupPass1'>

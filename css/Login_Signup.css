@@ -1,5 +1,5 @@
 /*This controls styling of the modal that covers the page*/
-.modal{
+.modalForLogin_Signup{
   display:none;
   position:fixed;
   z-index:1;
@@ -9,32 +9,6 @@
   width: 100%;
   overflow:auto;
   background-color:rgba(0, 0, 0, 0.8);
-
-}
-
-.creditModal{
-  display:none;
-  position:fixed;
-  z-index:1;
-  left:0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow:auto;
-  background-color:rgba(0, 0, 0, 0.8);
-
-
-}
-
-.creditForm{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:480px;
-  height:370px;
-  background:#fdfdfd;
-
 
 }
 
